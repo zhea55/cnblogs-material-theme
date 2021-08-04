@@ -1,11 +1,15 @@
 @use 'variables.scss' as *;;
 
+@use 'night-style.scss';
+
 body {
   font-family: 'SF Pro SC', 'SF Pro Text', 'SF Pro Icons', 'PingFang SC',
     'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
 
   #home {
     max-width: 980px;
+    min-width: auto;
+    width: auto;
 
     #header {
       border-bottom: none;
@@ -46,6 +50,11 @@ body {
         }
       }
     }
+
+    #main {
+      min-width: auto;
+    }
+
     #sideBar {
       display: none;
     }
@@ -131,6 +140,7 @@ body {
       }
 
       #comment_form {
+        margin: 0;
         #comment_nav {
           margin-top: 15px;
           font-size: $content-size;
@@ -148,6 +158,12 @@ body {
 
         .commentbox_main {
           width: 100%;
+        }
+
+        #tip_comment {
+          font-size: $meta-size;
+          margin: 10px 0;
+          display: block;
         }
       }
 
@@ -265,7 +281,7 @@ body {
 
     #footer {
       border: none;
-      padding: 0 0 15px 0;
+      padding: 0 0 65px 0;
       margin: 15px;
     }
 

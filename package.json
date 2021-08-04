@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "cnblogs material theme",
   "scripts": {
-    "dev": "npx sass style.scss ./dist/style.scss -w"
+    "dev": "npx sass style.scss ./dist/style.css -w",
+    "prod": "npx sass style.scss ./dist/style.css --style compressed"
   },
   "keywords": [
     "cnblogs"
