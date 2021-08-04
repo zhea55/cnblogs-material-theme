@@ -1,0 +1,187 @@
+@use 'variables.scss' as *;
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $night-colorPrimary !important;
+    color: $night-textColorPrimary !important;
+  }
+
+  #header {
+    background: $night-colorPrimary;
+
+    #blogTitle {
+      display: none;
+    }
+
+    #Header1_HeaderTitle {
+      color: $night-textColorPrimary;
+    }
+
+    #navigator {
+      background: $night-colorPrimaryDark;
+
+      #navList {
+        margin: 0;
+
+        > li > a {
+          color: $night-textColorPrimary;
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  #mainContent {
+    .day {
+      background-color: $night-colorAccent;
+      .postTitle {
+        > a {
+          color: $night-textColorPrimary;
+        }
+      }
+
+      .postDesc {
+        color: $night-textColorSecondary;
+
+        a {
+          color: $night-textColorSecondary;
+        }
+      }
+
+      .postCon {
+        > div > a {
+          color: $night-textColorSecondary;
+        }
+      }
+    }
+
+    .feedbackItem {
+      background-color: $night-colorAccent;
+      color: $night-textColorPrimary;
+
+      .feedbackListSubtitle {
+        color: $night-textColorSecondary;
+
+        a {
+          color: $night-textColorSecondary;
+        }
+      }
+
+      a {
+        color: $night-textColorPrimary;
+      }
+
+      .comment_vote {
+        > a {
+          background-color: $night-colorPrimary;
+        }
+      }
+    }
+
+    #comment_form {
+      #comment_nav {
+        a {
+          color: $night-textColorPrimary;
+        }
+      }
+
+      #commentbox_opt {
+        background-color: $night-colorAccent;
+        input,
+        a {
+          color: $night-textColorPrimary;
+          background-color: $night-colorPrimary;
+        }
+      }
+
+      #ad_t2,
+      #under_post_card1,
+      #under_post_card2 {
+        a {
+          color: $night-textColorPrimary;
+          background-color: $night-colorAccent;
+        }
+      }
+    }
+  }
+
+  #topics {
+    color: $night-textColorPrimary;
+    background-color: $night-colorAccent;
+
+    a {
+      color: $night-textColorPrimary;
+    }
+
+    .postBody {
+      color: $night-textColorPrimary;
+
+      #blog_post_info_block {
+        #EntryTag,
+        #EntryTag a {
+          color: $night-textColorSecondary;
+        }
+        #EntryTag a {
+          background-color: $night-colorPrimary;
+        }
+
+        #green_channel {
+          border: 1px dashed $night-textColorSecondary;
+
+          a {
+            color: $night-textColorPrimary !important;
+            background-color: $night-colorPrimary !important;
+          }
+        }
+
+        #div_digg {
+          > div {
+            background-color: $night-colorPrimary;
+            > span {
+              color: $night-textColorPrimary;
+            }
+          }
+        }
+      }
+    }
+
+    .postDesc {
+      color: $night-textColorSecondary;
+      > a {
+        color: $night-textColorSecondary;
+      }
+    }
+  }
+
+  #myposts {
+    color: $night-textColorPrimary;
+    background-color: $night-colorAccent;
+    a {
+      color: $night-textColorPrimary;
+    }
+
+    .postDesc2 {
+      color: $night-textColorSecondary;
+    }
+  }
+
+  .entrylist {
+    .entrylistItem {
+      color: $night-textColorPrimary;
+      background-color: $night-colorAccent;
+
+      a {
+        color: $night-textColorPrimary;
+      }
+
+      .entrylistItemPostDesc {
+        color: $night-textColorSecondary;
+        a {
+          color: $night-textColorSecondary;
+        }
+      }
+    }
+  }
+}

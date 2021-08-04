@@ -1,0 +1,16 @@
+{
+  "name": "cnblogs-material-theme",
+  "version": "1.0.0",
+  "description": "cnblogs material theme",
+  "scripts": {
+    "dev": "npx sass style.scss ./dist/style.scss -w"
+  },
+  "keywords": [
+    "cnblogs"
+  ],
+  "author": "Li Zhe",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.37.5"
+  }
+}
