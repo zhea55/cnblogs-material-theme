@@ -1,51 +1,55 @@
-@use 'variables.scss' as *;;
-
+@use 'node_modules/modern-normalize/modern-normalize.css';
+@use 'variables.scss' as *;
+@use 'day-style.scss';
 @use 'night-style.scss';
 
 body {
   font-family: 'SF Pro SC', 'SF Pro Text', 'SF Pro Icons', 'PingFang SC',
     'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
 
+
+  a {
+    text-decoration: none;
+  }
+
   #home {
     max-width: 980px;
-    min-width: auto;
-    width: auto;
+    margin: 0 auto;
 
     #header {
-      border-bottom: none;
-      padding-bottom: 0;
-      margin-top: 0;
       border-radius: 2px;
 
+      #blogTitle {
+        display: none;
+      }
+
       #navigator {
-        height: 44px;
+        height: 60px;
         padding: 0 5px;
         font-size: $meta-size;
         #navList {
-          margin: 0;
           height: 100%;
+          padding: 0;
+          float: left;
 
           > li {
-            height: 100%;
+            display: block;
+            float: left;
             > a {
-              width: auto;
-              height: auto;
-              padding: 14px 10px;
-              border: none;
-              box-sizing: border-box;
-              height: 100%;
               display: inline-block;
+              box-sizing: border-box;
+              padding: 22px 14px;
             }
           }
         }
 
         .blogStats {
-          margin: 0;
           height: 100%;
+          float: right;
 
           > span {
-            padding: 14px 10px;
             display: inline-block;
+            padding: 22px 10px;
           }
         }
       }
@@ -59,21 +63,14 @@ body {
       display: none;
     }
 
-    #mainContent,
-    #mainContent .forFlow {
-      float: inherit;
-      margin-left: 0;
-    }
-
     #mainContent {
       & .forFlow > .entrylistTitle {
         margin-top: 15px;
       }
 
       .day {
-        margin-bottom: auto;
-        padding-bottom: inherit;
         margin-top: 15px;
+        margin-bottom: auto;
         padding: 10px;
         border-radius: 2px;
 
@@ -82,15 +79,15 @@ body {
         }
 
         .postTitle {
-          border-bottom: none;
           font-weight: 400;
           font-size: $title-size;
+          border-bottom: none;
         }
 
         .postCon {
-          font-size: $content-size;
-          padding: 0;
           margin: 15px 0;
+          padding: 0;
+          font-size: $content-size;
           > div {
             line-height: $content-line-height;
           }
@@ -98,31 +95,30 @@ body {
 
         .postDesc {
           font-size: $meta-size;
+          text-align: right;
         }
       }
 
       .feedback_area_title {
-        visibility: hidden;
         margin: 0 0 15px 0;
-        border: none;
-        padding: 0;
+        visibility: hidden;
       }
 
       .feedbackItem {
-        padding: 10px;
         margin-bottom: 1px;
-        border-radius: 2px;
+        padding: 10px;
         font-size: $content-size;
+        border-radius: 2px;
 
         .comment_actions a {
-          padding: 0;
           margin-left: 10px;
+          padding: 0;
         }
         .feedbackCon {
-          border: none;
-          background-image: none;
-          padding: 0;
           margin: 0;
+          padding: 0;
+          background-image: none;
+          border: none;
 
           .blog_comment_body {
             padding: 10px 0;
@@ -131,11 +127,15 @@ body {
           .comment_vote {
             > a {
               display: inline-block;
-              padding: 5px 10px;
               margin-left: 10px;
+              padding: 5px 8px;
               border-radius: 2px;
             }
           }
+        }
+
+        .feedbackManage {
+          float: right;
         }
       }
 
@@ -144,6 +144,19 @@ body {
         #comment_nav {
           margin-top: 15px;
           font-size: $content-size;
+        }
+
+        .commentbox_main {
+          border: none;
+          #tbCommentBody {
+            padding: 10px;
+            border: none;
+          }
+        }
+
+        .commentbox_footer,
+        .commentbox_title {
+          border: none;
         }
       }
 
@@ -161,9 +174,9 @@ body {
         }
 
         #tip_comment {
-          font-size: $meta-size;
-          margin: 10px 0;
           display: block;
+          margin: 10px 0;
+          font-size: $meta-size;
         }
       }
 
@@ -173,20 +186,20 @@ body {
 
       #commentbox_opt {
         margin: 0;
-        font-size: $content-size;
         padding: 10px;
+        font-size: $content-size;
 
         input,
         a {
           display: inline-block;
-          padding: 5px 10px;
           width: auto;
           height: auto;
+          padding: 5px 10px;
         }
 
         input {
-          border: none;
           margin-right: 10px;
+          border: none;
         }
       }
 
@@ -196,10 +209,10 @@ body {
         margin-top: 20px;
         a {
           display: block;
-          font-size: $content-size;
           margin: 0;
-          line-height: $content-line-height;
           padding: 0 10px;
+          font-size: $content-size;
+          line-height: $content-line-height;
 
           & + a {
             margin-top: 1px;
@@ -220,24 +233,24 @@ body {
 
       .PostListTitle,
       .entrylistTitle {
-        padding: 0;
         margin: 0;
-        border: none;
-        font-size: $content-size;
+        padding: 0;
         font-weight: 400;
+        font-size: $content-size;
+        border: none;
       }
 
       #myposts {
-        border-radius: 2px;
         margin: 0;
 
         padding: 10px;
+        border-radius: 2px;
         .PostList {
-          padding: 0;
           margin: 0;
-          border: none;
+          padding: 0;
           font-size: $title-size;
           line-height: $content-line-height;
+          border: none;
 
           .postDesc2 {
             font-size: $meta-size;
@@ -252,20 +265,20 @@ body {
 
       .entrylist {
         .entrylistItem {
-          padding: 10px;
           margin: 15px 0 0 0;
+          padding: 10px;
 
           .entrylistPosttitle {
-            font-size: $title-size;
-            font-weight: 400;
-            border: none;
             padding: 0;
+            font-weight: 400;
+            font-size: $title-size;
+            border: none;
           }
 
           .entrylistPostSummary {
+            padding: 0;
             font-size: $content-size;
             line-height: $content-line-height;
-            padding: 0;
           }
 
           .entrylistItemPostDesc {
@@ -280,54 +293,34 @@ body {
     }
 
     #footer {
-      border: none;
-      padding: 0 0 65px 0;
-      margin: 15px;
+      margin: 15px 0 65px 0;
+      text-align: center;
     }
 
     #topics {
+      position: relative;
       margin-top: 15px;
       margin-bottom: 15px;
       padding: 0;
-      border-radius: 2px;
       padding: 10px;
-      position: relative;
+      border-radius: 2px;
 
       .postTitle {
-        margin: 0;
-        border: none;
-        padding: 0;
-        font-size: $title-size;
-        font-weight: 400;
         float: left;
-        width: 80%;
+        width: 82%;
+        margin: 0;
+        padding: 0;
+        font-weight: 400;
+        font-size: $title-size;
+        border: none;
       }
 
       .postBody {
         margin-top: 30px;
         padding: 0;
-        line-height: $content-line-height;
         font-size: $content-size;
+        line-height: $content-line-height;
         border: none;
-
-        #cnblogs_post_body {
-          margin-bottom: 0;
-          p,
-          ol {
-            margin-top: 0;
-            margin-bottom: 16px;
-          }
-
-          ol li {
-            margin: 0;
-          }
-
-          code {
-            a {
-              color: inherit;
-            }
-          }
-        }
 
         #blog_post_info_block {
           margin-top: 15px;
@@ -336,9 +329,6 @@ body {
             font-size: $meta-size;
             > a {
               text-decoration: none;
-              display: inline-block;
-              padding: 0 10px;
-              border-radius: 2px;
             }
           }
 
@@ -346,12 +336,12 @@ body {
             width: 100%;
 
             a {
-              text-shadow: none;
+              padding: 5px 10px;
               font-weight: normal;
+              font-size: $meta-size;
+              text-shadow: none;
               background: none;
               border-radius: 2px;
-              padding: 5px 10px;
-              font-size: $meta-size;
 
               img {
                 margin: 0;
@@ -363,19 +353,22 @@ body {
             position: absolute;
             top: 10px;
             right: 10px;
+            width: 15%;
             margin: 0;
-            width: auto;
+            text-align: right;
             > div {
-              background-image: none;
-              font-size: $content-size;
+              display: block;
+              float: left;
               width: auto;
               height: auto;
-              padding: 2px 10px;
-              margin: 0 0 0 10px;
-              display: inline-block;
+              margin: 0;
+              padding: 2px 8px;
+              font-size: $content-size;
+              background-image: none;
               border-radius: 2px;
 
               &.diggit {
+                margin-right: 10px;
                 &:before {
                   content: '推荐';
                 }
@@ -402,10 +395,26 @@ body {
       }
 
       .postDesc {
-        padding: 0;
         margin-top: 15px;
+        padding: 0;
         font-size: $meta-size;
       }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .blogStats {
+    display: none;
+  }
+
+  #div_digg {
+    > div {
+      font-size: $meta-size !important;
+    }
+    .diggit {
+      margin-right: 0 !important;
+      margin-bottom: 5px !important;
     }
   }
 }

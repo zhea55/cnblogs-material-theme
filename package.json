@@ -12,6 +12,11 @@
   "author": "Li Zhe",
   "license": "MIT",
   "devDependencies": {
+    "prettier": "^2.3.2",
+    "prettier-plugin-style-order": "^0.2.2",
     "sass": "^1.37.5"
+  },
+  "dependencies": {
+    "modern-normalize": "^1.1.0"
   }
 }

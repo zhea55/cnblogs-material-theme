@@ -1,30 +1,34 @@
 @use 'variables.scss' as *;
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   body {
-    color: $night-textColorPrimary !important;
-    background: $night-colorPrimary !important;
+    background: $colorPrimary !important;
+    color: $textColorPrimary !important;
   }
 
   #header {
-    background: $night-colorPrimary;
+    background: $colorPrimary;
+
+    #blogTitle {
+      display: none;
+    }
 
     #Header1_HeaderTitle {
-      color: $night-textColorPrimary;
+      color: $textColorPrimary;
     }
 
     #navigator {
-      background: $night-colorPrimaryDark;
+      background: $colorPrimaryDark;
 
       .blogStats {
-        color: $night-textColorSecondary;
+        color: $textColorSecondary;
       }
 
       #navList {
         margin: 0;
 
         > li > a {
-          color: $night-textColorPrimary;
+          color: $textColorPrimary;
           &:hover {
             background-color: inherit;
           }
@@ -35,47 +39,47 @@
 
   #mainContent {
     .day {
-      background-color: $night-colorAccent;
+      background-color: $colorAccent;
       .postTitle {
         > a {
-          color: $night-textColorPrimary;
+          color: $textColorPrimary;
         }
       }
 
       .postDesc {
-        color: $night-textColorSecondary;
+        color: $textColorSecondary;
 
         a {
-          color: $night-textColorSecondary;
+          color: $textColorSecondary;
         }
       }
 
       .postCon {
         > div > a {
-          color: $night-textColorSecondary;
+          color: $textColorSecondary;
         }
       }
     }
 
     .feedbackItem {
-      color: $night-textColorPrimary;
-      background-color: $night-colorAccent;
+      background-color: $colorAccent;
+      color: $textColorPrimary;
 
       .feedbackListSubtitle {
-        color: $night-textColorSecondary;
+        color: $textColorSecondary;
 
         a {
-          color: $night-textColorSecondary;
+          color: $textColorSecondary;
         }
       }
 
       a {
-        color: $night-textColorPrimary;
+        color: $textColorPrimary;
       }
 
       .comment_vote {
         > a {
-          background-color: $night-colorPrimary;
+          background-color: $colorPrimary;
         }
       }
     }
@@ -83,16 +87,16 @@
     #comment_form {
       #comment_nav {
         a {
-          color: $night-textColorPrimary;
+          color: $textColorPrimary;
         }
       }
 
       #commentbox_opt {
-        background-color: $night-colorAccent;
+        background-color: $colorAccent;
         input,
         a {
-          color: $night-textColorPrimary;
-          background-color: $night-colorPrimary;
+          color: $textColorPrimary;
+          background-color: $colorPrimary;
         }
       }
 
@@ -100,18 +104,18 @@
       #under_post_card1,
       #under_post_card2 {
         a {
-          color: $night-textColorPrimary;
-          background-color: $night-colorAccent;
+          color: $textColorPrimary;
+          background-color: $colorAccent;
         }
       }
 
       .commentbox_main {
-        color: $night-textColorPrimary;
-        background: $night-colorAccent;
+        color: $textColorPrimary;
+        background: $colorAccent;
 
         .commentbox_title {
           span {
-            color: $night-textColorPrimary;
+            color: $textColorPrimary;
             &.active,
             &:hover {
               border-bottom: 2px solid $night_textColorSecondary;
@@ -120,41 +124,41 @@
         }
 
         #tbCommentBody {
-          color: $night-textColorPrimary;
-          background: $night-colorPrimary;
+          color: $textColorPrimary;
+          background: $colorPrimary;
         }
       }
     }
 
     .topicListFooter {
-      a {
-        color: $night-textColorPrimary;
-      }
-    }
+  a {
+    color: $textColorPrimary;
+  }
+}
   }
 
   #topics {
-    color: $night-textColorPrimary;
-    background-color: $night-colorAccent;
+    color: $textColorPrimary;
+    background-color: $colorAccent;
 
     a {
-      color: $night-textColorPrimary;
+      color: $textColorPrimary;
     }
 
     .postBody {
-      color: $night-textColorPrimary;
+      color: $textColorPrimary;
 
       #cnblogs_post_body .octicon {
         display: inline-block;
-        vertical-align: text-bottom;
         fill: currentColor;
+        vertical-align: text-bottom;
       }
 
       #cnblogs_post_body .anchor {
         float: left;
+        line-height: 1;
         margin-left: -20px;
         padding-right: 4px;
-        line-height: 1;
       }
 
       #cnblogs_post_body .anchor:focus {
@@ -167,7 +171,7 @@
       #cnblogs_post_body h4 .octicon-link,
       #cnblogs_post_body h5 .octicon-link,
       #cnblogs_post_body h6 .octicon-link {
-        color: $night-textColorPrimary;
+        color: #1b1f23;
         vertical-align: middle;
         visibility: hidden;
       }
@@ -196,22 +200,20 @@
       #cnblogs_post_body h4:hover .anchor .octicon-link:before,
       #cnblogs_post_body h5:hover .anchor .octicon-link:before,
       #cnblogs_post_body h6:hover .anchor .octicon-link:before {
-        display: inline-block;
         width: 16px;
         height: 16px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
         content: ' ';
-      }
-      #cnblogs_post_body {
-        color: $night-textColorPrimary;
-        font-size: 16px;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica,
-          Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-        line-height: 1.5;
-        line-height: 1.5;
-        word-wrap: break-word;
+        display: inline-block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' version='1.1' width='16' height='16' aria-hidden='true'%3E%3Cpath fill-rule='evenodd' d='M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z'%3E%3C/path%3E%3C/svg%3E");
+      }#cnblogs_post_body {
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
+        line-height: 1.5;
+        color: #24292e;
+        font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+        font-size: 16px;
+        line-height: 1.5;
+        word-wrap: break-word;
       }
 
       #cnblogs_post_body details {
@@ -237,8 +239,8 @@
       }
 
       #cnblogs_post_body h1 {
-        margin: 0.67em 0;
         font-size: 2em;
+        margin: .67em 0;
       }
 
       #cnblogs_post_body img {
@@ -248,8 +250,8 @@
       #cnblogs_post_body code,
       #cnblogs_post_body kbd,
       #cnblogs_post_body pre {
+        font-family: monospace,monospace;
         font-size: 1em;
-        font-family: monospace, monospace;
       }
 
       #cnblogs_post_body hr {
@@ -259,15 +261,15 @@
       }
 
       #cnblogs_post_body input {
-        margin: 0;
         font: inherit;
+        margin: 0;
       }
 
       #cnblogs_post_body input {
         overflow: visible;
       }
 
-      #cnblogs_post_body [type='checkbox'] {
+      #cnblogs_post_body [type=checkbox] {
         box-sizing: border-box;
         padding: 0;
       }
@@ -277,13 +279,13 @@
       }
 
       #cnblogs_post_body input {
-        font-size: inherit;
         font-family: inherit;
+        font-size: inherit;
         line-height: inherit;
       }
 
       #cnblogs_post_body a {
-        color: #99bde6;
+        color: #0366d6;
         text-decoration: none;
       }
 
@@ -307,7 +309,7 @@
       #cnblogs_post_body hr:after,
       #cnblogs_post_body hr:before {
         display: table;
-        content: '';
+        content: "";
       }
 
       #cnblogs_post_body hr:after {
@@ -315,8 +317,8 @@
       }
 
       #cnblogs_post_body table {
-        border-collapse: collapse;
         border-spacing: 0;
+        border-collapse: collapse;
       }
 
       #cnblogs_post_body td,
@@ -331,9 +333,9 @@
       #cnblogs_post_body kbd {
         display: inline-block;
         padding: 3px 5px;
-        color: #444d56;
-        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         line-height: 10px;
+        color: #444d56;
         vertical-align: middle;
         background-color: #fafbfc;
         border: 1px solid #d1d5da;
@@ -401,9 +403,9 @@
 
       #cnblogs_post_body ol,
       #cnblogs_post_body ul {
+        padding-left: 0;
         margin-top: 0;
         margin-bottom: 0;
-        padding-left: 0;
       }
 
       #cnblogs_post_body ol ol,
@@ -424,8 +426,8 @@
 
       #cnblogs_post_body code,
       #cnblogs_post_body pre {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 12px;
-        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
       }
 
       #cnblogs_post_body pre {
@@ -440,102 +442,102 @@
         appearance: none;
       }
 
-      #cnblogs_post_body :checked + .radio-label {
+      #cnblogs_post_body :checked+.radio-label {
         position: relative;
         z-index: 1;
         border-color: #0366d6;
       }
 
       #cnblogs_post_body .border {
-        border: 1px solid #e1e4e8 !important;
+        border: 1px solid #e1e4e8!important;
       }
 
       #cnblogs_post_body .border-0 {
-        border: 0 !important;
+        border: 0!important;
       }
 
       #cnblogs_post_body .border-bottom {
-        border-bottom: 1px solid #e1e4e8 !important;
+        border-bottom: 1px solid #e1e4e8!important;
       }
 
       #cnblogs_post_body .rounded-1 {
-        border-radius: 3px !important;
+        border-radius: 3px!important;
       }
 
       #cnblogs_post_body .bg-white {
-        background-color: #fff !important;
+        background-color: #fff!important;
       }
 
       #cnblogs_post_body .bg-gray-light {
-        background-color: #fafbfc !important;
+        background-color: #fafbfc!important;
       }
 
       #cnblogs_post_body .text-gray-light {
-        color: #6a737d !important;
+        color: #6a737d!important;
       }
 
       #cnblogs_post_body .mb-0 {
-        margin-bottom: 0 !important;
+        margin-bottom: 0!important;
       }
 
       #cnblogs_post_body .my-2 {
-        margin-top: 8px !important;
-        margin-bottom: 8px !important;
+        margin-top: 8px!important;
+        margin-bottom: 8px!important;
       }
 
       #cnblogs_post_body .pl-0 {
-        padding-left: 0 !important;
+        padding-left: 0!important;
       }
 
       #cnblogs_post_body .py-0 {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
       }
 
       #cnblogs_post_body .pl-1 {
-        padding-left: 4px !important;
+        padding-left: 4px!important;
       }
 
       #cnblogs_post_body .pl-2 {
-        padding-left: 8px !important;
+        padding-left: 8px!important;
       }
 
       #cnblogs_post_body .py-2 {
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
+        padding-top: 8px!important;
+        padding-bottom: 8px!important;
       }
 
       #cnblogs_post_body .pl-3,
       #cnblogs_post_body .px-3 {
-        padding-left: 16px !important;
+        padding-left: 16px!important;
       }
 
       #cnblogs_post_body .px-3 {
-        padding-right: 16px !important;
+        padding-right: 16px!important;
       }
 
       #cnblogs_post_body .pl-4 {
-        padding-left: 24px !important;
+        padding-left: 24px!important;
       }
 
       #cnblogs_post_body .pl-5 {
-        padding-left: 32px !important;
+        padding-left: 32px!important;
       }
 
       #cnblogs_post_body .pl-6 {
-        padding-left: 40px !important;
+        padding-left: 40px!important;
       }
 
       #cnblogs_post_body .f6 {
-        font-size: 12px !important;
+        font-size: 12px!important;
       }
 
       #cnblogs_post_body .lh-condensed {
-        line-height: 1.25 !important;
+        line-height: 1.25!important;
       }
 
       #cnblogs_post_body .text-bold {
-        font-weight: 600 !important;
+        font-weight: 600!important;
       }
 
       #cnblogs_post_body .pl-c {
@@ -595,12 +597,12 @@
       }
 
       #cnblogs_post_body .pl-c2:before {
-        content: '^M';
+        content: "^M";
       }
 
       #cnblogs_post_body .pl-sr .pl-cce {
-        color: #22863a;
         font-weight: 700;
+        color: #22863a;
       }
 
       #cnblogs_post_body .pl-ml {
@@ -610,18 +612,18 @@
       #cnblogs_post_body .pl-mh,
       #cnblogs_post_body .pl-mh .pl-en,
       #cnblogs_post_body .pl-ms {
-        color: #005cc5;
         font-weight: 700;
+        color: #005cc5;
       }
 
       #cnblogs_post_body .pl-mi {
-        color: #24292e;
         font-style: italic;
+        color: #24292e;
       }
 
       #cnblogs_post_body .pl-mb {
-        color: #24292e;
         font-weight: 700;
+        color: #24292e;
       }
 
       #cnblogs_post_body .pl-md {
@@ -645,8 +647,8 @@
       }
 
       #cnblogs_post_body .pl-mdr {
-        color: #6f42c1;
         font-weight: 700;
+        color: #6f42c1;
       }
 
       #cnblogs_post_body .pl-ba {
@@ -658,82 +660,82 @@
       }
 
       #cnblogs_post_body .pl-corl {
-        color: #032f62;
         text-decoration: underline;
+        color: #032f62;
       }
 
       #cnblogs_post_body .mb-0 {
-        margin-bottom: 0 !important;
+        margin-bottom: 0!important;
       }
 
       #cnblogs_post_body .my-2 {
-        margin-bottom: 8px !important;
+        margin-bottom: 8px!important;
       }
 
       #cnblogs_post_body .my-2 {
-        margin-top: 8px !important;
+        margin-top: 8px!important;
       }
 
       #cnblogs_post_body .pl-0 {
-        padding-left: 0 !important;
+        padding-left: 0!important;
       }
 
       #cnblogs_post_body .py-0 {
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
+        padding-top: 0!important;
+        padding-bottom: 0!important;
       }
 
       #cnblogs_post_body .pl-1 {
-        padding-left: 4px !important;
+        padding-left: 4px!important;
       }
 
       #cnblogs_post_body .pl-2 {
-        padding-left: 8px !important;
+        padding-left: 8px!important;
       }
 
       #cnblogs_post_body .py-2 {
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
+        padding-top: 8px!important;
+        padding-bottom: 8px!important;
       }
 
       #cnblogs_post_body .pl-3 {
-        padding-left: 16px !important;
+        padding-left: 16px!important;
       }
 
       #cnblogs_post_body .pl-4 {
-        padding-left: 24px !important;
+        padding-left: 24px!important;
       }
 
       #cnblogs_post_body .pl-5 {
-        padding-left: 32px !important;
+        padding-left: 32px!important;
       }
 
       #cnblogs_post_body .pl-6 {
-        padding-left: 40px !important;
+        padding-left: 40px!important;
       }
 
       #cnblogs_post_body .pl-7 {
-        padding-left: 48px !important;
+        padding-left: 48px!important;
       }
 
       #cnblogs_post_body .pl-8 {
-        padding-left: 64px !important;
+        padding-left: 64px!important;
       }
 
       #cnblogs_post_body .pl-9 {
-        padding-left: 80px !important;
+        padding-left: 80px!important;
       }
 
       #cnblogs_post_body .pl-10 {
-        padding-left: 96px !important;
+        padding-left: 96px!important;
       }
 
       #cnblogs_post_body .pl-11 {
-        padding-left: 112px !important;
+        padding-left: 112px!important;
       }
 
       #cnblogs_post_body .pl-12 {
-        padding-left: 128px !important;
+        padding-left: 128px!important;
       }
 
       #cnblogs_post_body hr {
@@ -743,9 +745,9 @@
       #cnblogs_post_body kbd {
         display: inline-block;
         padding: 3px 5px;
-        color: #444d56;
-        font: 11px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         line-height: 10px;
+        color: #444d56;
         vertical-align: middle;
         background-color: #fafbfc;
         border: 1px solid #d1d5da;
@@ -756,19 +758,19 @@
       #cnblogs_post_body:after,
       #cnblogs_post_body:before {
         display: table;
-        content: '';
+        content: "";
       }
 
       #cnblogs_post_body:after {
         clear: both;
       }
 
-      #cnblogs_post_body > :first-child {
-        margin-top: 0 !important;
+      #cnblogs_post_body>:first-child {
+        margin-top: 0!important;
       }
 
-      #cnblogs_post_body > :last-child {
-        margin-bottom: 0 !important;
+      #cnblogs_post_body>:last-child {
+        margin-bottom: 0!important;
       }
 
       #cnblogs_post_body a:not([href]) {
@@ -789,9 +791,9 @@
       }
 
       #cnblogs_post_body hr {
-        height: 0.25em;
-        margin: 24px 0;
+        height: .25em;
         padding: 0;
+        margin: 24px 0;
         background-color: #e1e4e8;
         border: 0;
       }
@@ -799,14 +801,14 @@
       #cnblogs_post_body blockquote {
         padding: 0 1em;
         color: #6a737d;
-        border-left: 0.25em solid #dfe2e5;
+        border-left: .25em solid #dfe2e5;
       }
 
-      #cnblogs_post_body blockquote > :first-child {
+      #cnblogs_post_body blockquote>:first-child {
         margin-top: 0;
       }
 
-      #cnblogs_post_body blockquote > :last-child {
+      #cnblogs_post_body blockquote>:last-child {
         margin-bottom: 0;
       }
 
@@ -828,7 +830,7 @@
 
       #cnblogs_post_body h1,
       #cnblogs_post_body h2 {
-        padding-bottom: 0.3em;
+        padding-bottom: .3em;
         border-bottom: 1px solid #eaecef;
       }
 
@@ -845,12 +847,12 @@
       }
 
       #cnblogs_post_body h5 {
-        font-size: 0.875em;
+        font-size: .875em;
       }
 
       #cnblogs_post_body h6 {
+        font-size: .85em;
         color: #6a737d;
-        font-size: 0.85em;
       }
 
       #cnblogs_post_body ol,
@@ -870,12 +872,12 @@
         word-wrap: break-all;
       }
 
-      #cnblogs_post_body li > p {
+      #cnblogs_post_body li>p {
         margin-top: 16px;
       }
 
-      #cnblogs_post_body li + li {
-        margin-top: 0.25em;
+      #cnblogs_post_body li+li {
+        margin-top: .25em;
       }
 
       #cnblogs_post_body dl {
@@ -883,16 +885,16 @@
       }
 
       #cnblogs_post_body dl dt {
-        margin-top: 16px;
         padding: 0;
-        font-weight: 600;
+        margin-top: 16px;
         font-size: 1em;
         font-style: italic;
+        font-weight: 600;
       }
 
       #cnblogs_post_body dl dd {
-        margin-bottom: 16px;
         padding: 0 16px;
+        margin-bottom: 16px;
       }
 
       #cnblogs_post_body table {
@@ -921,24 +923,24 @@
       }
 
       #cnblogs_post_body img {
-        box-sizing: initial;
         max-width: 100%;
+        box-sizing: initial;
         background-color: #fff;
       }
 
-      #cnblogs_post_body img[align='right'] {
+      #cnblogs_post_body img[align=right] {
         padding-left: 20px;
       }
 
-      #cnblogs_post_body img[align='left'] {
+      #cnblogs_post_body img[align=left] {
         padding-right: 20px;
       }
 
       #cnblogs_post_body code {
+        padding: .2em .4em;
         margin: 0;
-        padding: 0.2em 0.4em;
         font-size: 85%;
-        background-color: rgba(27, 31, 35, 0.05);
+        background-color: rgba(27,31,35,.05);
         border-radius: 3px;
       }
 
@@ -946,12 +948,12 @@
         word-wrap: normal;
       }
 
-      #cnblogs_post_body pre > code {
-        margin: 0;
+      #cnblogs_post_body pre>code {
         padding: 0;
+        margin: 0;
         font-size: 100%;
-        white-space: pre;
         word-break: normal;
+        white-space: pre;
         background: transparent;
         border: 0;
       }
@@ -978,8 +980,8 @@
       #cnblogs_post_body pre code {
         display: inline;
         max-width: auto;
-        margin: 0;
         padding: 0;
+        margin: 0;
         overflow: visible;
         line-height: inherit;
         word-wrap: normal;
@@ -989,9 +991,9 @@
 
       #cnblogs_post_body .commit-tease-sha {
         display: inline-block;
-        color: #444d56;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 90%;
-        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+        color: #444d56;
       }
 
       #cnblogs_post_body .full-commit .btn-outline:not(:disabled):hover {
@@ -1014,12 +1016,12 @@
         min-width: 50px;
         padding-right: 10px;
         padding-left: 10px;
-        color: rgba(27, 31, 35, 0.3);
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 12px;
-        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
         line-height: 20px;
-        white-space: nowrap;
+        color: rgba(27,31,35,.3);
         text-align: right;
+        white-space: nowrap;
         vertical-align: top;
         cursor: pointer;
         -webkit-user-select: none;
@@ -1029,7 +1031,7 @@
       }
 
       #cnblogs_post_body .blob-num:hover {
-        color: rgba(27, 31, 35, 0.6);
+        color: rgba(27,31,35,.6);
       }
 
       #cnblogs_post_body .blob-num:before {
@@ -1046,75 +1048,75 @@
 
       #cnblogs_post_body .blob-code-inner {
         overflow: visible;
-        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
         font-size: 12px;
-        font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-        white-space: pre;
+        color: #24292e;
         word-wrap: normal;
+        white-space: pre;
       }
 
       #cnblogs_post_body .pl-token.active,
       #cnblogs_post_body .pl-token:hover {
-        background: #ffea7f;
         cursor: pointer;
+        background: #ffea7f;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='1'] {
+      #cnblogs_post_body .tab-size[data-tab-size="1"] {
         -moz-tab-size: 1;
         tab-size: 1;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='2'] {
+      #cnblogs_post_body .tab-size[data-tab-size="2"] {
         -moz-tab-size: 2;
         tab-size: 2;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='3'] {
+      #cnblogs_post_body .tab-size[data-tab-size="3"] {
         -moz-tab-size: 3;
         tab-size: 3;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='4'] {
+      #cnblogs_post_body .tab-size[data-tab-size="4"] {
         -moz-tab-size: 4;
         tab-size: 4;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='5'] {
+      #cnblogs_post_body .tab-size[data-tab-size="5"] {
         -moz-tab-size: 5;
         tab-size: 5;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='6'] {
+      #cnblogs_post_body .tab-size[data-tab-size="6"] {
         -moz-tab-size: 6;
         tab-size: 6;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='7'] {
+      #cnblogs_post_body .tab-size[data-tab-size="7"] {
         -moz-tab-size: 7;
         tab-size: 7;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='8'] {
+      #cnblogs_post_body .tab-size[data-tab-size="8"] {
         -moz-tab-size: 8;
         tab-size: 8;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='9'] {
+      #cnblogs_post_body .tab-size[data-tab-size="9"] {
         -moz-tab-size: 9;
         tab-size: 9;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='10'] {
+      #cnblogs_post_body .tab-size[data-tab-size="10"] {
         -moz-tab-size: 10;
         tab-size: 10;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='11'] {
+      #cnblogs_post_body .tab-size[data-tab-size="11"] {
         -moz-tab-size: 11;
         tab-size: 11;
       }
 
-      #cnblogs_post_body .tab-size[data-tab-size='12'] {
+      #cnblogs_post_body .tab-size[data-tab-size="12"] {
         -moz-tab-size: 12;
         tab-size: 12;
       }
@@ -1123,35 +1125,36 @@
         list-style-type: none;
       }
 
-      #cnblogs_post_body .task-list-item + .task-list-item {
+      #cnblogs_post_body .task-list-item+.task-list-item {
         margin-top: 3px;
       }
 
       #cnblogs_post_body .task-list-item input {
-        margin: 0 0.2em 0.25em -1.6em;
+        margin: 0 .2em .25em -1.6em;
         vertical-align: middle;
       }
+
 
       #blog_post_info_block {
         #EntryTag,
         #EntryTag a {
-          color: $night-textColorSecondary;
+          color: $textColorSecondary;
         }
 
         #green_channel {
-          border: 1px dashed $night-textColorSecondary;
+          border: 1px dashed $textColorSecondary;
 
           a {
-            color: $night-textColorPrimary !important;
-            background-color: $night-colorPrimary !important;
+            color: $textColorPrimary !important;
+            background-color: $colorPrimary !important;
           }
         }
 
         #div_digg {
           > div {
-            background-color: $night-colorPrimary;
+            background-color: $colorPrimary;
             > span {
-              color: $night-textColorPrimary;
+              color: $textColorPrimary;
             }
           }
         }
@@ -1159,38 +1162,38 @@
     }
 
     .postDesc {
-      color: $night-textColorSecondary;
+      color: $textColorSecondary;
       > a {
-        color: $night-textColorSecondary;
+        color: $textColorSecondary;
       }
     }
   }
 
   #myposts {
-    color: $night-textColorPrimary;
-    background-color: $night-colorAccent;
+    color: $textColorPrimary;
+    background-color: $colorAccent;
     a {
-      color: $night-textColorPrimary;
+      color: $textColorPrimary;
     }
 
     .postDesc2 {
-      color: $night-textColorSecondary;
+      color: $textColorSecondary;
     }
   }
 
   .entrylist {
     .entrylistItem {
-      color: $night-textColorPrimary;
-      background-color: $night-colorAccent;
+      color: $textColorPrimary;
+      background-color: $colorAccent;
 
       a {
-        color: $night-textColorPrimary;
+        color: $textColorPrimary;
       }
 
       .entrylistItemPostDesc {
-        color: $night-textColorSecondary;
+        color: $textColorSecondary;
         a {
-          color: $night-textColorSecondary;
+          color: $textColorSecondary;
         }
       }
     }
