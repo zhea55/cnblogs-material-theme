@@ -7,7 +7,7 @@
 
 ## 安装：
 
-```bash
+```
 npm install
 npm run prod
 ```
@@ -22,7 +22,7 @@ npm run prod
 ![paste css](https://raw.githubusercontent.com/zhea55/cnblogs-material-theme/main/screenshot/cnblogs-theme-setting2.png)
 
 ## 自定义主题样式
-```bash
+```
 npm run dev
 ```
 配置代理，将服务器响应的custom.css文件映射到本地dist/style.css文件
