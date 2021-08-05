@@ -1,5 +1,8 @@
 # cnblogs-material-theme
 
+## 预览图
+![preview](https://github.com/zhea55/cnblogs-material-theme/blob/main/screenshot/dark-article.png)
+
 ## 本主题特点：
 - 极简，突出博客内容
 - 高对比度，适合眼睛阅读
