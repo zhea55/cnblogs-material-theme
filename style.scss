@@ -1,12 +1,12 @@
 @use 'node_modules/modern-normalize/modern-normalize.css';
-@use 'variables.scss' as *;
+@use '_variables.scss' as *;
 @use 'day-style.scss';
 @use 'night-style.scss';
 
 body {
   font-family: 'SF Pro SC', 'SF Pro Text', 'SF Pro Icons', 'PingFang SC',
-    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !important;
-
+    'Helvetica Neue', 'Luxi Sans', 'Segoe UI', 'Hiragino Sans GB',
+    'Microsoft Yahei', sans-serif, 'Apple Logo' !important;
 
   a {
     text-decoration: none;
@@ -28,9 +28,9 @@ body {
         padding: 0 5px;
         font-size: $meta-size;
         #navList {
+          float: left;
           height: 100%;
           padding: 0;
-          float: left;
 
           > li {
             display: block;
@@ -44,8 +44,8 @@ body {
         }
 
         .blogStats {
-          height: 100%;
           float: right;
+          height: 100%;
 
           > span {
             display: inline-block;
@@ -71,7 +71,7 @@ body {
       .day {
         margin-top: 15px;
         margin-bottom: auto;
-        padding: 10px;
+        padding: 15px;
         border-radius: 2px;
 
         .dayTitle {
@@ -106,7 +106,7 @@ body {
 
       .feedbackItem {
         margin-bottom: 1px;
-        padding: 10px;
+        padding: 15px;
         font-size: $content-size;
         border-radius: 2px;
 
@@ -149,7 +149,7 @@ body {
         .commentbox_main {
           border: none;
           #tbCommentBody {
-            padding: 10px;
+            padding: 15px;
             border: none;
           }
         }
@@ -266,7 +266,7 @@ body {
       .entrylist {
         .entrylistItem {
           margin: 15px 0 0 0;
-          padding: 10px;
+          padding: 15px;
 
           .entrylistPosttitle {
             padding: 0;
@@ -276,6 +276,7 @@ body {
           }
 
           .entrylistPostSummary {
+            margin: 15px 0;
             padding: 0;
             font-size: $content-size;
             line-height: $content-line-height;
@@ -301,8 +302,7 @@ body {
       position: relative;
       margin-top: 15px;
       margin-bottom: 15px;
-      padding: 0;
-      padding: 10px;
+      padding: 15px;
       border-radius: 2px;
 
       .postTitle {
@@ -342,6 +342,7 @@ body {
               text-shadow: none;
               background: none;
               border-radius: 2px;
+              box-shadow: none;
 
               img {
                 margin: 0;
@@ -351,8 +352,8 @@ body {
 
           #div_digg {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 15px;
+            right: 15px;
             width: 15%;
             margin: 0;
             text-align: right;
@@ -411,6 +412,7 @@ body {
   #div_digg {
     > div {
       font-size: $meta-size !important;
+      cursor: pointer;
     }
     .diggit {
       margin-right: 0 !important;
