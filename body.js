@@ -36,5 +36,4 @@
 
     addCSS('https://www.cnblogs.com/css/prismjs/prism.css');
   }
-
 })(window.jQuery);

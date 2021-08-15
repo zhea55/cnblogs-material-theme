@@ -71,12 +71,9 @@
         }
       }
 
-      a {
-        color: $night-textColorPrimary;
-      }
-
       .comment_vote {
         > a {
+          color: $night-textColorPrimary;
           background-color: $night-colorPrimary;
         }
       }
